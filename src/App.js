@@ -69,7 +69,7 @@ export default () => {
       <footer>
         Feito por Paulo Sapatera<br></br>
         Direitos de imagem para Netflix<br></br>
-        Dados do site Themoviedb.org
+        Dados do site Themoviedb.org.
       </footer>
 
       {movieList.length <= 0 &&
