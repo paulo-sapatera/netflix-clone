@@ -1,0 +1,68 @@
+.movieRow {
+    margin-bottom: 30px;
+}
+/* zera todas as margens e deixa só a da esquerda com 30px */
+.movieRow h2{
+    margin: 0px 0px 0px 30px;
+}
+.movieRow--listarea{
+    /* tudo que passar na tela na horizontal sera cortado */
+    overflow-x: hidden;
+    /* da um respiro da esquerda */
+    padding-left: 30px;
+}
+.movieRow--list {
+    transition: all ease 0.5s;
+}
+.movieRow--item{
+    display:inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+.movieRow--item img{
+    width: 100%;
+    /* css dela diminui a imagem pra ter 90%, então ela separa da outra */
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+.movieRow--item img:hover{
+    /* passa o mouse a img volta 100%, em cima eu falei p ela ter 90% da o efeito */
+    transform: scale(1);
+}
+
+/* position absolute é pra eles ficarem flutuando (n atrapalhar o layoult) */
+/* ositens diplay, alignt items, justify-content foram pra centralizar o icone no meio da barra */
+.movieRow--left,
+.movieRow--right{
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+.movieRow--left{
+    left: 0;
+}
+.movieRow--right{
+    right: 0;
+}
+/* da o efeito de aparecer só quando eu passo o mouse por cima */
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--lef{
+    opacity: 1;
+    transition: all ease 0.5s;
+}
+
+@media (max-width:760px) {
+    .movieRow--lef,
+    .movieRow--right{
+        opacity: 1;
+    }
+}
