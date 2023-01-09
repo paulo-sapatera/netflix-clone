@@ -1,5 +1,7 @@
 .movieRow {
     margin-bottom: 30px;
+    overflow:hidden;
+    width: 100%;
 }
 /* zera todas as margens e deixa só a da esquerda com 30px */
 .movieRow h2{
@@ -55,13 +57,13 @@
 }
 /* da o efeito de aparecer só quando eu passo o mouse por cima */
 .movieRow:hover .movieRow--left,
-.movieRow:hover .movieRow--lef{
+.movieRow:hover .movieRow--right{
     opacity: 1;
     transition: all ease 0.5s;
 }
 
 @media (max-width:760px) {
-    .movieRow--lef,
+    .movieRow--left,
     .movieRow--right{
         opacity: 1;
     }
